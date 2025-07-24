@@ -6,7 +6,7 @@ function App() {
   const [welcomeResponse, setWelcomeResponse] = useState("")
 
   const welcomeHandler = async () => {
-    const welcomeR = await axios.post("http://192.168.100.113:3601/api/welcome", { name: welcomeText })
+    const welcomeR = await axios.post("https://test-backend-taupe-six.vercel.app/api/welcome", { name: welcomeText })
     setWelcomeResponse(welcomeR?.data?.message)
   }
 
